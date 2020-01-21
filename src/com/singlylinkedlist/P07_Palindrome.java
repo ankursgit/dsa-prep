@@ -39,7 +39,7 @@ public class P07_Palindrome {
 		System.out.println(lastNode.next.next.data);
 		
 		//COMPARE NODES FOR PALINDROME
-		while(curr != lastNode) {
+		while(curr.data == lastNode.data) {
 			if(curr.data != lastNode.data) {
 				isPalin = false;;
 				break;
