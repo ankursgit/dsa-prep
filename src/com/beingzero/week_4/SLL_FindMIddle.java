@@ -18,7 +18,5 @@ public class SLL_FindMIddle
 			System.out.println(prevSlow.data);
 		else
 			System.out.println(slow.data);
-		
-		
 	}
 }
