@@ -1,6 +1,6 @@
 package com.beingzero.week_4;
 
-public class RemoveCycle {
+public class SLL_RemoveCycle {
 
 	static void removeCycle(ZLLNode head) 
 	{
