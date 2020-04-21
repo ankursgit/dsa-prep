@@ -4,51 +4,45 @@ public class P07_Palindrome {
 
 	static void checkPalindrome(ANode curr)
 	{
-		ANode prev_slow = curr;
-		ANode slow = curr;
-		ANode fast = curr;
+		ANode slowPtr = curr;
+		ANode fastPtr = curr;
+		ANode secondHalfHead = null;
 		ANode middleNode = null;
-		ANode second_half = null;
-		ANode lastNode = null;
-		boolean isPalin = true;
-		/*
-		 * Get the middle of the list. Move slow_ptr by 1 and fast_ptrr by 2, slow_ptr
-		 * will have the middle node
-		 */
-		while (fast != null && fast.next != null) {
-			prev_slow = slow;
-			slow = slow.next;
-			fast = fast.next.next;
-		}
-		/*
-		 * ODD LIST
-		 * 		FAST != NULL
-		 * 		Middle Node = slow
-		 * 
-		 * EVEN LIST
-		 * 		FAST == NULL
-		 */
-		if(fast != null)
-		{
-			middleNode = slow;
-			slow = slow.next;
-		}
-		prev_slow = null;
-		second_half = slow;
-		lastNode = reverse(middleNode);
-		System.out.println(lastNode.next.next.data);
+		ANode prevToMiddle = null;
 		
-		//COMPARE NODES FOR PALINDROME
-		while(curr.data == lastNode.data) {
-			if(curr.data != lastNode.data) {
-				isPalin = false;;
-				break;
-			}
-			lastNode = lastNode.next;
-			curr = curr.next;
+		// Get the middle of the list.
+		// 1 2 2 1 5
+		while (fastPtr != null && fastPtr.next != null) {
+			prevToMiddle = slowPtr;
+			slowPtr = slowPtr.next;
+			fastPtr = fastPtr.next.next;
 		}
-		if(isPalin)
-			System.out.println("LIST IS PALINDROME");
+
+		/*
+		 * ODD LIST :: FAST != NULL --> Middle Node = slow 
+		 * EVEN LIST :: FAST == NULL
+		 */
+
+		if (fastPtr != null) {
+			middleNode = slowPtr;
+			slowPtr = slowPtr.next;
+		}
+		secondHalfHead = slowPtr;
+		
+		//Reverse Second Half
+		secondHalfHead = reverse(secondHalfHead);
+		
+		
+		// Compare the list
+		ANode front = curr;
+		ANode back = secondHalfHead;
+		System.out.println(compareNodes(front, back));
+		
+		// Restore SLL
+		System.out.println(prevToMiddle.data);
+		secondHalfHead = reverse(secondHalfHead);
+		
+		middleNode.next = secondHalfHead;
 		
 	}
 
@@ -64,6 +58,18 @@ public class P07_Palindrome {
 			current = next;
 		}
 		return prev;
+
+	}
+	
+	static boolean compareNodes(ANode front, ANode back) {
+		while (front != null && back != null) {
+			if (front.data == back.data) {
+				front = front.next;
+				back = back.next;
+			} else
+				return false;
+		}
+		return true;
 	}
 
 	
