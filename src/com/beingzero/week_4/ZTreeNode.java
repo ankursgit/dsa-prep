@@ -10,4 +10,10 @@ public class ZTreeNode
 	}
 	public ZTreeNode() {
 	}
+	
+	@Override
+	public String toString()
+	{
+		return String.valueOf(this.data);
+	}
 }
