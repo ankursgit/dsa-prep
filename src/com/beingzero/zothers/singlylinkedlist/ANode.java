@@ -1,4 +1,4 @@
-package com.singlylinkedlist;
+package com.beingzero.zothers.singlylinkedlist;
 
 public final class ANode {
 	int data;

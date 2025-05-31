@@ -1,4 +1,4 @@
-package com.tree.binarytree;
+package com.beingzero.zothers.binarytree;
 
 public class Node {
 	int data;

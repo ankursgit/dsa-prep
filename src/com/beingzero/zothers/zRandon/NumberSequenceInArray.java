@@ -1,4 +1,4 @@
-package com.zRandon;
+package com.beingzero.zothers.zRandon;
 
 import java.util.ArrayList;
 import java.util.Arrays;

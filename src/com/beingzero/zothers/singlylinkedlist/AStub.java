@@ -1,4 +1,4 @@
-package com.singlylinkedlist;
+package com.beingzero.zothers.singlylinkedlist;
 
 public class AStub {
 	public static void main(String[] args) {
