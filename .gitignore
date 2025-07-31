@@ -17,6 +17,8 @@ out/
 
 # Compiled class files
 *.class
+# Ignore compiled classes directory
+classes/
 
 # Build directories
 /build/
