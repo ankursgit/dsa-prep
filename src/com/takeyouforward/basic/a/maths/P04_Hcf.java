@@ -1,4 +1,4 @@
-package com.takeyouforward.basic.maths;
+package com.takeyouforward.basic.a.maths;
 
 import java.util.Scanner;
 

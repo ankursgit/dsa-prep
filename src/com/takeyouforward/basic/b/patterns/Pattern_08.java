@@ -1,4 +1,4 @@
-package com.takeyouforward.basic.patterns;
+package com.takeyouforward.basic.b.patterns;
 
 import java.util.Scanner;
 

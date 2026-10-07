@@ -1,23 +1,23 @@
-package com.takeyouforward.basic.patterns;
+package com.takeyouforward.basic.b.patterns;
 
 import java.util.Scanner;
 
-public class Pattern_03 {
+public class Pattern_02 {
     /**
-         1
-         12
-         123
-         1234
-         12345
+         *
+         **
+         ***
+         ****
+         *****
     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter pattern level: ");
         int n = sc.nextInt();
         System.out.println("\n----------PATTERN-----------");
-        for(int i = 1; i <= n; i++){
-            for(int j = 1; j <=i; j++){
-                System.out.print(j);
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j <= i; j++){
+                System.out.print("*");
             }
             System.out.println();
         }

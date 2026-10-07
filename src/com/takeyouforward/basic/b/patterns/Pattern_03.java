@@ -1,14 +1,14 @@
-package com.takeyouforward.basic.patterns;
+package com.takeyouforward.basic.b.patterns;
 
 import java.util.Scanner;
 
-public class Pattern_04 {
+public class Pattern_03 {
     /**
          1
-         22
-         333
-         4444
-         55555
+         12
+         123
+         1234
+         12345
     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -17,7 +17,7 @@ public class Pattern_04 {
         System.out.println("\n----------PATTERN-----------");
         for(int i = 1; i <= n; i++){
             for(int j = 1; j <=i; j++){
-                System.out.print(i);
+                System.out.print(j);
             }
             System.out.println();
         }
